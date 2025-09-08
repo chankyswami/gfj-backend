@@ -1,5 +1,5 @@
 # Use an official JDK 21 image as a parent image
-FROM eclipse-temurin:21-jdk
+FROM docker.io/eclipse-temurin:21-jdk
 
 # Set the working directory in the container
 WORKDIR /opt
