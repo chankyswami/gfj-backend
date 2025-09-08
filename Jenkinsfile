@@ -2,7 +2,7 @@ pipeline {
     agent {
         kubernetes {
             label 'jnlp-buildah'
-            yamlFile 'jnlp-buildah.yaml'
+            yamlFile 'gfj-be/jnlp-buildah.yaml'
         }
     }
 
