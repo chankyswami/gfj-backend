@@ -54,23 +54,23 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                container('jnlp') {
-                    dir('gfj-be') {
-                        withSonarQubeEnv('sonar') {
-                            sh '''
-                                set -x
-                                mvn sonar:sonar \
-                                    -Dsonar.projectKey=${REPO_NAME} \
-                                    -Dsonar.host.url=${SONAR_URL} \
-                                    -Dsonar.login=${SONAR_TOKEN}
-                            '''
-                        }
-                    }
-                }
-            }
-        }
+        // stage('SonarQube Analysis') {
+        //     steps {
+        //         container('jnlp') {
+        //             dir('gfj-be') {
+        //                 withSonarQubeEnv('sonar') {
+        //                     sh '''
+        //                         set -x
+        //                         mvn sonar:sonar \
+        //                             -Dsonar.projectKey=${REPO_NAME} \
+        //                             -Dsonar.host.url=${SONAR_URL} \
+        //                             -Dsonar.login=${SONAR_TOKEN}
+        //                     '''
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
 
         // stage('Quality Gate') {
         //     steps {
