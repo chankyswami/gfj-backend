@@ -44,7 +44,7 @@ pipeline {
         stage('Build Maven Project') {
             steps {
                 container('jnlp') {
-                    dir('gfj-be') {   // 👈 run Maven in backend folder
+                    dir('gfj-be') {
                         sh '''
                             set -x
                             mvn clean package -DskipTests
@@ -57,7 +57,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 container('jnlp') {
-                    dir('gfj-be') {   // 👈 run Sonar inside gfj-be
+                    dir('gfj-be') {
                         withSonarQubeEnv('sonar') {
                             sh '''
                                 set -x
