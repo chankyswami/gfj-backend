@@ -59,7 +59,8 @@ public class SecurityConfig {
         // Allow frontend origins
         configuration.setAllowedOrigins(Arrays.asList(
                 "http://localhost:3000",        // local dev React
-                "http://13.203.132.105"         // production frontend served by Nginx
+                "http://13.203.132.105",        // production frontend served by Nginx
+                "http://172.16.16.100"          // k8s frontend
         ));
 
         // Allowed methods
