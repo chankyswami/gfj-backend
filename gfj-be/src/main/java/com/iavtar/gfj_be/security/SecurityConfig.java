@@ -73,7 +73,7 @@ public class SecurityConfig {
         configuration.setExposedHeaders(Arrays.asList("Authorization"));
 
         // Enable credentials (cookies/JWT in headers)
-        configuration.setAllowCredentials(true);
+        configuration.setAllowCredentials(false);
 
         configuration.setMaxAge(3600L);
 
