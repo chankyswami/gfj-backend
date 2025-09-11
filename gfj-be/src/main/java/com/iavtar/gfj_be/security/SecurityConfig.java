@@ -57,12 +57,7 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         // Allow frontend origins
-        configuration.setAllowedOrigins(Arrays.asList(
-                "http://localhost:3000",        // local dev React
-                "http://13.203.132.105",        // production frontend served by Nginx
-                "http://gfj.local",        // k8s frontend
-                "http://172.16.16.102"
-        ));
+        configuration.addAllowedOriginPattern("*");
 
         // Allowed methods
         configuration.setAllowedMethods(Arrays.asList(
